@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chathura Jayasekara | Researcher & Educator, Engineer </title>
+    <title>Chathura Jayasekara | Engineer, Educator & Researcher</title>
 
     <meta name="description"
-          content="Academic and professional website of Chathura Jayasekara — Mechanical & Control Systems Engineer, Lecturer and Biomedical Engineering Researcher.">
+          content="Academic and professional website of Chathura Jayasekara — Mechanical & Control Systems Engineer, University Educator and Biomedical Engineering Researcher.">
 
     <style>
         :root {
             --bg: #f7f8fa;
             --surface: #ffffff;
+            --surface-soft: #f3f6fb;
             --text: #172033;
-            --muted: #667085;
-            --accent: #174ea6;
-            --accent-dark: #103b7d;
-            --line: #e4e7ec;
-            --soft: #eef4ff;
+            --muted: #5f6d82;
+            --accent: #1959b8;
+            --accent-dark: #10458f;
+            --line: #dfe5ee;
             --max-width: 1180px;
+            --shadow: 0 12px 35px rgba(20, 45, 80, 0.07);
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 88px;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.65;
         }
 
         a {
@@ -46,86 +48,90 @@
         }
 
         .container {
-            width: min(92%, var(--max-width));
-            margin: auto;
+            width: min(100% - 40px, var(--max-width));
+            margin: 0 auto;
         }
 
-        /* ---------- NAVIGATION ---------- */
+        /* ---------------- NAVIGATION ---------------- */
 
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.94);
-            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.96);
             border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(12px);
         }
 
-        nav {
+        .nav {
             min-height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 30px;
         }
 
-        .logo {
+        .brand {
             font-size: 1.15rem;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: -0.02em;
+            white-space: nowrap;
         }
 
-        .logo span {
+        .brand span {
             color: var(--accent);
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            align-items: center;
+            gap: 26px;
             list-style: none;
-            font-size: 0.92rem;
         }
 
         .nav-links a {
-            color: #475467;
-            transition: 0.2s;
+            color: #45536a;
+            font-size: 0.98rem;
+            transition: color .2s ease;
         }
 
         .nav-links a:hover {
             color: var(--accent);
         }
 
-        /* ---------- HERO ---------- */
+        /* ---------------- HERO ---------------- */
 
         .hero {
-            min-height: 88vh;
+            min-height: 570px;
             display: flex;
             align-items: center;
             background:
-                radial-gradient(circle at 80% 20%, #e8f0ff 0, transparent 32%),
-                var(--bg);
+                radial-gradient(circle at 82% 20%, rgba(39, 105, 205, 0.10), transparent 32%),
+                linear-gradient(135deg, #f8fafc 0%, #f4f7fc 100%);
+            border-bottom: 1px solid var(--line);
         }
 
-        .hero-content {
+        .hero-inner {
+            padding: 70px 0 78px;
             max-width: 900px;
-            padding: 80px 0;
         }
 
         .eyebrow {
-            display: inline-block;
+            display: inline-flex;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: #eaf2ff;
             color: var(--accent);
-            background: var(--soft);
-            padding: 7px 14px;
-            border-radius: 30px;
-            font-size: 0.85rem;
+            font-size: 0.93rem;
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
-        h1 {
-            font-size: clamp(3rem, 7vw, 5.8rem);
-            line-height: 1.02;
-            letter-spacing: -0.055em;
-            margin-bottom: 28px;
+        .hero h1 {
+            font-size: clamp(4rem, 8vw, 7rem);
+            line-height: .9;
+            letter-spacing: -0.065em;
+            margin-bottom: 34px;
         }
 
         .hero h1 span {
@@ -133,100 +139,190 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.15rem, 2vw, 1.45rem);
-            color: #475467;
-            max-width: 800px;
-            margin-bottom: 35px;
+            max-width: 850px;
+            color: #40536f;
+            font-size: clamp(1.12rem, 2vw, 1.42rem);
+            line-height: 1.7;
+            margin-bottom: 32px;
         }
 
-        .hero-buttons {
+        .buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 22px;
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 25px;
             border-radius: 8px;
-            font-weight: 600;
+            font-weight: 700;
             border: 1px solid var(--accent);
-            transition: 0.25s;
+            transition: transform .2s ease, background .2s ease;
         }
 
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
+        .button:hover {
             transform: translateY(-2px);
         }
 
-        .btn-secondary {
-            background: white;
+        .button.primary {
+            color: white;
+            background: var(--accent);
+        }
+
+        .button.primary:hover {
+            background: var(--accent-dark);
+        }
+
+        .button.secondary {
             color: var(--accent);
+            background: white;
         }
 
-        .btn-secondary:hover {
-            background: var(--soft);
-        }
-
-        /* ---------- SECTIONS ---------- */
+        /* ---------------- GENERAL SECTIONS ---------------- */
 
         section {
-            padding: 100px 0;
+            padding: 88px 0;
         }
 
-        .section-label {
+        .section-heading {
+            max-width: 780px;
+            margin-bottom: 38px;
+        }
+
+        .section-kicker {
             color: var(--accent);
-            font-size: 0.82rem;
-            font-weight: 700;
+            font-size: .82rem;
+            font-weight: 800;
+            letter-spacing: .19em;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            letter-spacing: -0.035em;
-            margin-bottom: 18px;
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            letter-spacing: -.04em;
+            margin-bottom: 13px;
         }
 
-        .section-intro {
-            max-width: 760px;
+        .section-heading p {
             color: var(--muted);
-            margin-bottom: 45px;
+            font-size: 1.05rem;
         }
 
-        /* ---------- ABOUT ---------- */
+        /* ---------------- EXPLORE CARDS ---------------- */
+
+        .explore {
+            background: var(--surface);
+        }
+
+        .explore-header {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 50px;
+            align-items: end;
+            margin-bottom: 34px;
+        }
+
+        .explore-header .section-heading {
+            margin-bottom: 0;
+        }
+
+        .explore-intro {
+            color: var(--muted);
+            max-width: 420px;
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .explore-card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 24px rgba(20, 45, 80, .035);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+
+        .explore-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: #cbd8eb;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #eaf2ff;
+            color: var(--accent);
+            font-size: 1.35rem;
+            margin-bottom: 20px;
+        }
+
+        .explore-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 9px;
+        }
+
+        .explore-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .card-list {
+            list-style: none;
+            border-top: 1px solid var(--line);
+            padding-top: 17px;
+            margin-bottom: 22px;
+        }
+
+        .card-list li {
+            color: #53647b;
+            margin: 9px 0;
+            font-size: .94rem;
+        }
+
+        .card-link {
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        /* ---------------- ABOUT ---------------- */
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: start;
         }
 
         .about-text p {
+            color: var(--muted);
             margin-bottom: 18px;
-            color: #475467;
+            font-size: 1.03rem;
         }
 
-        .quick-facts {
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 30px;
+        .facts {
+            display: grid;
+            gap: 14px;
         }
 
         .fact {
-            padding: 18px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .fact:last-child {
-            border-bottom: none;
+            padding: 20px 22px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 12px;
         }
 
         .fact strong {
@@ -236,181 +332,331 @@
 
         .fact span {
             color: var(--muted);
-            font-size: 0.92rem;
+            font-size: .94rem;
         }
 
-        /* ---------- CAREER ---------- */
+        /* ---------------- CAREER ---------------- */
+
+        .career {
+            background: white;
+        }
 
         .timeline {
             position: relative;
-            max-width: 900px;
+            max-width: 920px;
+            margin-top: 15px;
         }
 
         .timeline::before {
             content: "";
             position: absolute;
             left: 8px;
-            top: 10px;
-            bottom: 10px;
+            top: 5px;
+            bottom: 5px;
             width: 2px;
-            background: var(--line);
+            background: #d9e2ef;
         }
 
         .timeline-item {
             position: relative;
-            padding-left: 45px;
-            margin-bottom: 45px;
+            padding-left: 42px;
+            margin-bottom: 34px;
         }
 
-        .timeline-dot {
+        .timeline-item::before {
+            content: "";
             position: absolute;
-            left: 0;
-            top: 7px;
-            width: 18px;
-            height: 18px;
+            left: 2px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
             background: var(--accent);
-            border: 4px solid var(--bg);
-            box-shadow: 0 0 0 2px var(--accent);
+            border: 3px solid #e6effd;
         }
 
-        .timeline-date {
+        .timeline-year {
             color: var(--accent);
-            font-size: 0.85rem;
-            font-weight: 700;
+            font-size: .9rem;
+            font-weight: 800;
             margin-bottom: 4px;
         }
 
         .timeline-item h3 {
-            font-size: 1.35rem;
-            margin-bottom: 4px;
+            font-size: 1.18rem;
+            margin-bottom: 3px;
         }
 
-        .timeline-item h4 {
-            color: var(--muted);
-            font-weight: 500;
-            margin-bottom: 10px;
+        .timeline-item .place {
+            color: #5c6c82;
+            margin-bottom: 7px;
         }
 
         .timeline-item p {
-            color: #475467;
+            color: var(--muted);
         }
 
-        /* ---------- CARDS ---------- */
+        /* ---------------- TEACHING ---------------- */
 
-        .cards {
+        .teaching {
+            background: var(--surface-soft);
+        }
+
+        .teaching-intro {
+            max-width: 850px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 35px;
+        }
+
+        .two-column {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 22px;
         }
 
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 30px;
-            transition: 0.25s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(16, 24, 40, 0.08);
-        }
-
-        .card-number {
-            color: var(--accent);
-            font-weight: 800;
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        /* ---------- RESEARCH ---------- */
-
-        .research {
-            background: #101828;
-            color: white;
-        }
-
-        .research .section-label {
-            color: #84adff;
-        }
-
-        .research .section-intro {
-            color: #b9c2d0;
-        }
-
-        .research .card {
-            background: #182230;
-            border-color: #344054;
-        }
-
-        .research .card p {
-            color: #b9c2d0;
-        }
-
-        /* ---------- SKILLS ---------- */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            padding: 8px 14px;
-            background: var(--surface);
-            border: 1px solid var(--line);
-            border-radius: 30px;
-            color: #475467;
-            font-size: 0.9rem;
-        }
-
-        /* ---------- CONTACT ---------- */
-
-        .contact-box {
-            background: var(--accent);
-            color: white;
-            border-radius: 20px;
-            padding: 55px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .contact-box h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 10px;
-        }
-
-        .contact-box p {
-            color: #dbe7ff;
-        }
-
-        .contact-box .btn {
+        .content-card {
             background: white;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 27px;
+        }
+
+        .content-card h3 {
+            margin-bottom: 13px;
+            font-size: 1.25rem;
+        }
+
+        .content-card p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .subject {
+            padding: 18px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 11px;
+        }
+
+        .subject strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .subject span {
+            color: var(--muted);
+            font-size: .92rem;
+        }
+
+        /* ---------------- LECTURE MATERIALS ---------------- */
+
+        .lecture-library {
+            margin-top: 50px;
+        }
+
+        .lecture-library > h3 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .lecture-library > p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .lecture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .lecture-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 20px 22px;
+        }
+
+        .lecture-card h4 {
+            margin-bottom: 3px;
+        }
+
+        .lecture-card p {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        .status {
             color: var(--accent);
-            border-color: white;
+            font-size: .85rem;
+            font-weight: 700;
             white-space: nowrap;
         }
 
-        /* ---------- FOOTER ---------- */
+        /* ---------------- ENGINEERING ---------------- */
+
+        .engineering {
+            background: white;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .experience-card {
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--surface);
+        }
+
+        .experience-card h3 {
+            margin-bottom: 9px;
+        }
+
+        .experience-card p {
+            color: var(--muted);
+        }
+
+        /* ---------------- RESEARCH ---------------- */
+
+        .research {
+            background: var(--surface-soft);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 22px;
+        }
+
+        .research-card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .research-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .research-card p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .research-list {
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .research-list li {
+            margin-bottom: 7px;
+        }
+
+        /* ---------------- PROJECTS ---------------- */
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 27px;
+        }
+
+        .project-number {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: .85rem;
+            margin-bottom: 13px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+        }
+
+        /* ---------------- CONTACT ---------------- */
+
+        .contact {
+            background: #172033;
+            color: white;
+        }
+
+        .contact .section-kicker {
+            color: #8db8ff;
+        }
+
+        .contact .section-heading p {
+            color: #bdc8d8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .contact-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-link {
+            padding: 17px 19px;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 10px;
+            background: rgba(255,255,255,.045);
+        }
+
+        .contact-link strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .contact-link span {
+            color: #c1cada;
+            font-size: .94rem;
+        }
+
+        .contact-note {
+            color: #bdc8d8;
+            align-self: center;
+        }
+
+        /* ---------------- FOOTER ---------------- */
 
         footer {
-            padding: 35px 0;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: 0.9rem;
+            background: #111827;
+            color: #8996a9;
+            padding: 24px 0;
+            font-size: .88rem;
         }
 
         .footer-inner {
@@ -419,54 +665,67 @@
             gap: 20px;
         }
 
-        /* ---------- MOBILE ---------- */
+        /* ---------------- RESPONSIVE ---------------- */
 
-        @media (max-width: 850px) {
-
+        @media (max-width: 900px) {
             .nav-links {
-                display: none;
+                gap: 15px;
             }
 
-            .about-grid {
+            .explore-header,
+            .about-grid,
+            .research-grid,
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 35px;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-            }
-
-            section {
-                padding: 75px 0;
+            .explore-grid,
+            .experience-grid,
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 680px) {
+            .container {
+                width: min(100% - 28px, var(--max-width));
+            }
 
-            h1 {
-                font-size: 3rem;
+            .nav {
+                min-height: 66px;
+            }
+
+            .nav-links {
+                display: none;
             }
 
             .hero {
                 min-height: auto;
             }
 
-            .hero-content {
-                padding: 100px 0 70px;
+            .hero-inner {
+                padding: 52px 0 62px;
             }
 
-            .btn {
-                width: 100%;
-                text-align: center;
+            .hero h1 {
+                font-size: clamp(3.5rem, 17vw, 5.5rem);
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .explore-grid,
+            .experience-grid,
+            .project-grid,
+            .two-column,
+            .lecture-grid,
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
             }
         }
     </style>
@@ -475,12 +734,10 @@
 <body>
 
 <header>
-    <div class="container">
-        <nav>
-            <a href="#home" class="logo">
-                Chathura <span>Jayasekara</span>
-            </a>
+    <div class="container nav">
+        <a href="#home" class="brand">Chathura <span>Jayasekara</span></a>
 
+        <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#career">Career</a></li>
@@ -494,477 +751,644 @@
     </div>
 </header>
 
+<main>
 
-<!-- HERO -->
+    <!-- ==================== HOME ==================== -->
 
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-inner">
 
-            <div class="eyebrow">
-                Research . Engineering · University teaching
+                <div class="eyebrow">
+                    Research · Engineering · University Teaching
+                </div>
+
+                <h1>
+                    Chathura<br>
+                    <span>Jayasekara</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Mechanical &amp; Control Systems Engineer, University Educator,
+                    and Biomedical Engineering Researcher with experience spanning
+                    industrial automation, robotics, engineering education, and
+                    quantitative biomedical imaging.
+                </p>
+
+                <div class="buttons">
+                    <a class="button primary" href="#explore">Explore my work →</a>
+                    <a class="button secondary" href="#contact">Get in touch</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPLORE ==================== -->
+
+    <section class="explore" id="explore">
+        <div class="container">
+
+            <div class="explore-header">
+                <div class="section-heading">
+                    <div class="section-kicker">Explore my work</div>
+                    <h2>Teaching. Research. Engineering.</h2>
+                </div>
+
+                <p class="explore-intro">
+                    Explore my university teaching, research work, engineering
+                    experience, projects, and growing collection of academic
+                    resources.
+                </p>
             </div>
 
-            <h1>
-                Chathura<br>
-                <span>Jayasekara</span>
-            </h1>
+            <div class="explore-grid">
 
-            <p class="hero-subtitle">
-                Mechanical & Control Systems Engineer,
-                University Educator, and Biomedical Engineering Researcher
-                with experience spanning industrial automation, robotics,
-                engineering education, and quantitative biomedical imaging.
+                <article class="explore-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>University Teaching</h3>
+                    <p>
+                        Teaching experience, lecture materials, teaching
+                        philosophy, and engineering education resources.
+                    </p>
+                    <ul class="card-list">
+                        <li>Lecture materials</li>
+                        <li>Subjects taught</li>
+                        <li>Teaching philosophy</li>
+                    </ul>
+                    <a class="card-link" href="#teaching">Explore Teaching →</a>
+                </article>
+
+                <article class="explore-card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Research</h3>
+                    <p>
+                        Biomedical imaging, MSc thesis work, research projects,
+                        publications, and technical discussion articles.
+                    </p>
+                    <ul class="card-list">
+                        <li>MSc thesis &amp; research work</li>
+                        <li>Publications</li>
+                        <li>Research notes</li>
+                    </ul>
+                    <a class="card-link" href="#research">Explore Research →</a>
+                </article>
+
+                <article class="explore-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Engineering &amp; Projects</h3>
+                    <p>
+                        Industrial automation, control systems, robotics,
+                        mechanical engineering, and selected projects.
+                    </p>
+                    <ul class="card-list">
+                        <li>Industrial automation</li>
+                        <li>Control systems &amp; robotics</li>
+                        <li>Engineering projects</li>
+                    </ul>
+                    <a class="card-link" href="#engineering">Explore Engineering →</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-kicker">About</div>
+                <h2>Engineering, teaching and research</h2>
+                <p>
+                    An interdisciplinary professional background connecting
+                    mechanical engineering, control and automation, university
+                    education, and biomedical engineering research.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+                    <p>
+                        My background combines engineering practice with
+                        university teaching and research. My engineering
+                        experience includes industrial automation, control
+                        systems, project coordination, installation,
+                        commissioning, and technical work.
+                    </p>
+
+                    <p>
+                        I have taught engineering subjects at university level,
+                        including engineering mechanics, control systems,
+                        vehicle technology, CAD, and other technology-focused
+                        subjects.
+                    </p>
+
+                    <p>
+                        More recently, my work in Finland has focused on
+                        biomedical engineering and quantitative analysis of
+                        physiological signals and imaging data.
+                    </p>
+                </div>
+
+                <div class="facts">
+                    <div class="fact">
+                        <strong>Education</strong>
+                        <span>MSc Biomedical Engineering · University of Oulu</span>
+                    </div>
+
+                    <div class="fact">
+                        <strong>Engineering foundation</strong>
+                        <span>BSc Engineering · Mechanical Engineering, Control &amp; Automation</span>
+                    </div>
+
+                    <div class="fact">
+                        <strong>Additional specialization</strong>
+                        <span>Postgraduate Diploma in Industrial Automation</span>
+                    </div>
+
+                    <div class="fact">
+                        <strong>Academic focus</strong>
+                        <span>Engineering education, biomedical imaging, automation and robotics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CAREER ==================== -->
+
+    <section class="career" id="career">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-kicker">Career Journey</div>
+                <h2>From engineering practice to teaching and research</h2>
+                <p>
+                    A career combining industrial engineering, university
+                    teaching, and biomedical engineering research.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2024 – Present</div>
+                    <h3>Biomedical Engineering Research</h3>
+                    <div class="place">University of Oulu / Oulu Functional Neuroimaging Group</div>
+                    <p>
+                        Quantitative analysis of physiological pulsations in
+                        biomedical imaging, including optical-flow-based
+                        computational analysis and ROI-level measurements.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2021 – 2024</div>
+                    <h3>Lecturer · Engineering Technology</h3>
+                    <div class="place">Institute of Technology, University of Moratuwa</div>
+                    <p>
+                        Teaching and course coordination in Engineering
+                        Mechanics, Control Systems, Vehicle Technology, and CAD.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2019 – 2021</div>
+                    <h3>Lecturer · Mechanical Technology</h3>
+                    <div class="place">University College Kuliyapitiya</div>
+                    <p>
+                        Teaching Electrical Systems of Farm Machinery, Advanced
+                        Vehicle Control, Refrigeration and Air Conditioning,
+                        together with course coordination.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2017 – 2019</div>
+                    <h3>Mechanical Engineer · Special Projects</h3>
+                    <div class="place">GESCO (Pvt) Ltd.</div>
+                    <p>
+                        Industrial automation system design, supplier
+                        coordination, installation and commissioning support,
+                        after-sales work, technical reports, and system
+                        specifications.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Earlier engineering experience</div>
+                    <h3>Mechanical Engineering &amp; Maintenance Roles</h3>
+                    <div class="place">
+                        Industrial and Consumer Electronics Ltd. · Emperor Residencies · Advantis Ltd.
+                    </div>
+                    <p>
+                        Earlier professional experience in engineering,
+                        maintenance, and industrial environments.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TEACHING ==================== -->
+
+    <section class="teaching" id="teaching">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-kicker">University Teaching</div>
+                <h2>Teaching experience and academic resources</h2>
+            </div>
+
+            <p class="teaching-intro">
+                My teaching approach combines structured explanations with
+                active learning, real-world examples, questions, discussion,
+                practical application, and formative feedback. This section
+                will also grow into a collection of lecture materials and
+                engineering education resources.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">
-                    Explore my work
-                </a>
+            <div class="two-column">
 
-                <a href="#contact" class="btn btn-secondary">
-                    Get in touch
-                </a>
-            </div>
+                <article class="content-card">
+                    <h3>Teaching experience</h3>
+                    <p>
+                        University lecturer experience across mechanical,
+                        control, vehicle, CAD, and technology-focused subjects.
+                    </p>
+                    <p>
+                        Responsibilities have included teaching, course
+                        coordination, preparation of learning materials, and
+                        supporting student learning.
+                    </p>
+                </article>
 
-        </div>
-    </div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-    <div class="container">
-
-        <div class="section-label">About</div>
-
-        <h2 class="section-title">
-            Engineering, teaching and research
-        </h2>
-
-        <p class="section-intro">
-            My professional journey has developed across mechanical engineering,
-            industrial automation, university teaching, robotics and biomedical
-            engineering research.
-        </p>
-
-        <div class="about-grid">
-
-            <div class="about-text">
-
-                <p>
-                    I am an engineer and educator with an interdisciplinary
-                    background spanning mechanical engineering, control and
-                    automation, robotics and biomedical engineering.
-                </p>
-
-                <p>
-                    My engineering experience includes industrial automation,
-                    control-system projects, commissioning, technical
-                    coordination and special projects.
-                </p>
-
-                <p>
-                    I have also taught engineering subjects at university level,
-                    including engineering mechanics, control systems, vehicle
-                    technology, CAD, advanced vehicle control, and refrigeration
-                    and air conditioning.
-                </p>
-
-                <p>
-                    More recently, my work in Finland has focused on biomedical
-                    engineering and quantitative analysis of physiological
-                    signals and imaging data.
-                </p>
+                <article class="content-card">
+                    <h3>Teaching philosophy</h3>
+                    <p>
+                        I aim to create an environment where students can
+                        explore concepts, ask questions, connect theory with
+                        real-world situations, and develop practical
+                        engineering skills.
+                    </p>
+                    <p>
+                        I use structured explanations together with examples,
+                        interactive discussion, hands-on application, and
+                        formative feedback.
+                    </p>
+                </article>
 
             </div>
 
-            <div class="quick-facts">
+            <div class="section-heading" style="margin-top: 55px; margin-bottom: 20px;">
+                <h2 style="font-size: 1.9rem;">Subjects taught</h2>
+            </div>
 
-                <div class="fact">
-                    <strong>Education</strong>
-                    <span>
-                        MSc Biomedical Engineering · University of Oulu
-                    </span>
+            <div class="subject-grid">
+                <div class="subject">
+                    <strong>Engineering Mechanics</strong>
+                    <span>Fundamental engineering mechanics and problem solving</span>
                 </div>
 
-                <div class="fact">
-                    <strong>Engineering</strong>
-                    <span>
-                        Mechanical Engineering · Control & Automation
-                    </span>
+                <div class="subject">
+                    <strong>Control Systems</strong>
+                    <span>Control concepts and engineering applications</span>
                 </div>
 
-                <div class="fact">
-                    <strong>Teaching</strong>
-                    <span>
-                        University-level engineering teaching experience
-                    </span>
+                <div class="subject">
+                    <strong>CAD</strong>
+                    <span>Computer-aided engineering design</span>
                 </div>
 
-                <div class="fact">
-                    <strong>Research</strong>
-                    <span>
-                        Biomedical imaging, physiological signals & optical flow
-                    </span>
+                <div class="subject">
+                    <strong>Vehicle Technology</strong>
+                    <span>Vehicle systems and engineering technology</span>
                 </div>
 
+                <div class="subject">
+                    <strong>Advanced Vehicle Control</strong>
+                    <span>Vehicle control and related engineering concepts</span>
+                </div>
+
+                <div class="subject">
+                    <strong>Electrical Systems of Farm Machinery</strong>
+                    <span>Electrical systems and applications in agricultural machinery</span>
+                </div>
+
+                <div class="subject">
+                    <strong>Refrigeration &amp; Air Conditioning</strong>
+                    <span>Fundamentals and engineering applications</span>
+                </div>
+            </div>
+
+            <!-- Lecture library: add real PDF links here later -->
+            <div class="lecture-library">
+                <h3>Lecture Materials</h3>
+                <p>
+                    A growing collection of lecture notes and teaching
+                    materials. Engineering Mechanics will be the first lecture
+                    series, followed by other subjects.
+                </p>
+
+                <div class="lecture-grid">
+
+                    <div class="lecture-card">
+                        <div>
+                            <h4>Engineering Mechanics</h4>
+                            <p>Lecture series · materials will be added progressively</p>
+                        </div>
+                        <span class="status">Coming soon</span>
+                    </div>
+
+                    <div class="lecture-card">
+                        <div>
+                            <h4>Control Systems</h4>
+                            <p>Lecture series</p>
+                        </div>
+                        <span class="status">Planned</span>
+                    </div>
+
+                    <div class="lecture-card">
+                        <div>
+                            <h4>CAD</h4>
+                            <p>Lecture and learning materials</p>
+                        </div>
+                        <span class="status">Planned</span>
+                    </div>
+
+                    <div class="lecture-card">
+                        <div>
+                            <h4>Vehicle Technology</h4>
+                            <p>Lecture and learning materials</p>
+                        </div>
+                        <span class="status">Planned</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="buttons" style="margin-top: 30px;">
+                <a class="button secondary" href="#contact">Teaching enquiries →</a>
             </div>
 
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- ==================== ENGINEERING ==================== -->
 
-<!-- CAREER -->
+    <section class="engineering" id="engineering">
+        <div class="container">
 
-<section id="career">
-    <div class="container">
-
-        <div class="section-label">Career Journey</div>
-
-        <h2 class="section-title">
-            From engineering practice to research
-        </h2>
-
-        <p class="section-intro">
-            A career connecting industrial engineering, automation,
-            university education and biomedical research.
-        </p>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024 – Present</div>
-                <h3>Biomedical Engineering & Research</h3>
-                <h4>University of Oulu</h4>
+            <div class="section-heading">
+                <div class="section-kicker">Engineering &amp; Industrial Experience</div>
+                <h2>Engineering practice across automation, control and mechanical systems</h2>
                 <p>
-                    Quantitative analysis of biomedical imaging and
-                    physiological signals, including optical-flow-based
-                    analysis of pulsation-related dynamics.
+                    Professional engineering experience together with
+                    project-based technical work in automation, control and
+                    mechanical engineering.
                 </p>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2021 – 2024</div>
-                <h3>Lecturer · Engineering Technology</h3>
-                <h4>Institute of Technology, University of Moratuwa</h4>
-                <p>
-                    Teaching engineering mechanics, control systems,
-                    vehicle technology and CAD, together with course
-                    coordination and curriculum-related activities.
-                </p>
-            </div>
+            <div class="experience-grid">
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2019 – 2021</div>
-                <h3>Lecturer · Mechanical Technology</h3>
-                <h4>University College Kuliyapitiya</h4>
-                <p>
-                    Teaching electrical systems of farm machinery,
-                    advanced vehicle control, and refrigeration and
-                    air conditioning.
-                </p>
-            </div>
+                <article class="experience-card">
+                    <h3>Industrial Automation</h3>
+                    <p>
+                        Automation system design, supplier coordination,
+                        installation, commissioning, after-sales support,
+                        technical reports, and system specifications.
+                    </p>
+                </article>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2017 – 2019</div>
-                <h3>Mechanical Engineer · Special Projects</h3>
-                <h4>GESCO (Pvt) Ltd.</h4>
-                <p>
-                    Industrial automation project design, supplier
-                    coordination, installation and commissioning,
-                    after-sales support, technical reporting and
-                    system specifications.
-                </p>
-            </div>
+                <article class="experience-card">
+                    <h3>Control Systems</h3>
+                    <p>
+                        Engineering education and practical experience in
+                        control systems, automation, and related applications.
+                    </p>
+                </article>
 
+                <article class="experience-card">
+                    <h3>Mechanical Engineering</h3>
+                    <p>
+                        Mechanical engineering and maintenance experience
+                        across industrial and building-service environments.
+                    </p>
+                </article>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- ==================== RESEARCH ==================== -->
 
-<!-- TEACHING -->
+    <section class="research" id="research">
+        <div class="container">
 
-<section id="teaching">
-    <div class="container">
-
-        <div class="section-label">Teaching</div>
-
-        <h2 class="section-title">
-            Engineering education
-        </h2>
-
-        <p class="section-intro">
-            My teaching approach combines structured explanations,
-            active learning, real-world examples and opportunities
-            for students to apply concepts to practical problems.
-        </p>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="card-number">01</div>
-                <h3>Control Systems</h3>
+            <div class="section-heading">
+                <div class="section-kicker">Research</div>
+                <h2>Quantitative biomedical imaging and computational analysis</h2>
                 <p>
-                    Teaching control concepts through mathematical
-                    foundations, practical examples and engineering
-                    applications.
+                    Research work connecting biomedical engineering, imaging,
+                    physiological signals, optical flow, and computational
+                    analysis.
                 </p>
             </div>
 
-            <div class="card">
-                <div class="card-number">02</div>
-                <h3>Engineering Mechanics</h3>
-                <p>
-                    Connecting fundamental mechanics with structured
-                    problem solving and engineering applications.
-                </p>
-            </div>
+            <div class="research-grid">
 
-            <div class="card">
-                <div class="card-number">03</div>
-                <h3>CAD & Vehicle Technology</h3>
-                <p>
-                    Applying engineering principles to computer-aided
-                    design, vehicle systems and technology.
-                </p>
-            </div>
+                <article class="research-card">
+                    <h3>MSc Thesis &amp; Research Work</h3>
+                    <p>
+                        My MSc research at the University of Oulu investigated
+                        pulsation-driven flow using fMREye/MREG signals and
+                        optical-flow analysis.
+                    </p>
 
+                    <ul class="research-list">
+                        <li>Physiological pulsation analysis</li>
+                        <li>Optical-flow-based signal analysis</li>
+                        <li>Cardiac, respiratory and VLF components</li>
+                        <li>ROI-level flow magnitude and direction</li>
+                        <li>Quantitative computational pipelines</li>
+                    </ul>
+
+                    <!-- Add your official University of Oulu thesis URL here -->
+                    <div style="margin-top: 22px;">
+                        <span class="status">Thesis repository link to be added</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <h3>Research Notes &amp; Discussion Articles</h3>
+                    <p>
+                        A future collection of accessible technical discussions
+                        based on research topics, methods, engineering concepts,
+                        and scientific literature.
+                    </p>
+
+                    <p>
+                        Articles can include in-text citations and a reference
+                        list, with links to DOI or publisher pages where
+                        appropriate.
+                    </p>
+
+                    <div style="margin-top: 22px;">
+                        <span class="status">Articles will be added progressively</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <h3>Publications</h3>
+                    <p>
+                        Published research will be listed here as the academic
+                        record develops.
+                    </p>
+
+                    <p>
+                        Each publication can include authors, year, title,
+                        journal or conference, DOI, publisher link, and—where
+                        appropriate—a permitted full-text link.
+                    </p>
+
+                    <div style="margin-top: 22px;">
+                        <span class="status">Publications will be added here</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <h3>Research Interests</h3>
+                    <ul class="research-list">
+                        <li>Biomedical imaging and physiological signalling</li>
+                        <li>Optical flow and quantitative image analysis</li>
+                        <li>Computational biomedical engineering</li>
+                        <li>Robotics and intelligent control</li>
+                        <li>Engineering data analysis</li>
+                    </ul>
+                </article>
+
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- ==================== PROJECTS ==================== -->
 
+    <section class="projects" id="projects">
+        <div class="container">
 
-<!-- ENGINEERING -->
-
-<section id="engineering">
-    <div class="container">
-
-        <div class="section-label">Engineering</div>
-
-        <h2 class="section-title">
-            Industrial engineering & automation
-        </h2>
-
-        <p class="section-intro">
-            Practical engineering experience developed through industrial
-            projects, automation systems, maintenance engineering and
-            technical coordination.
-        </p>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="card-number">01</div>
-                <h3>Industrial Automation</h3>
+            <div class="section-heading">
+                <div class="section-kicker">Projects</div>
+                <h2>Selected engineering and research projects</h2>
                 <p>
-                    Project design, system specifications, supplier
-                    coordination, installation and commissioning.
+                    A place to document selected technical projects with
+                    descriptions, methods, results, images, code, and related
+                    documents as appropriate.
                 </p>
             </div>
 
-            <div class="card">
-                <div class="card-number">02</div>
-                <h3>Control Systems</h3>
-                <p>
-                    Control engineering, automation concepts,
-                    industrial systems and practical troubleshooting.
-                </p>
-            </div>
+            <div class="project-grid">
 
-            <div class="card">
-                <div class="card-number">03</div>
-                <h3>Mechanical Engineering</h3>
-                <p>
-                    Mechanical systems, maintenance engineering,
-                    technical projects and engineering problem solving.
-                </p>
-            </div>
+                <article class="project-card">
+                    <div class="project-number">01 · ROBOTICS</div>
+                    <h3>Mobile Robot Navigation</h3>
+                    <p>
+                        Research and project work involving mobile robot
+                        navigation, vision-based systems, and control.
+                    </p>
+                </article>
 
+                <article class="project-card">
+                    <div class="project-number">02 · AUTOMATION</div>
+                    <h3>Industrial Automation</h3>
+                    <p>
+                        Industrial automation and control-system project work,
+                        including design, coordination, installation and
+                        commissioning.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">03 · BIOMEDICAL ENGINEERING</div>
+                    <h3>Biomedical Data Analysis</h3>
+                    <p>
+                        Computational analysis of biomedical imaging and
+                        physiological signals using quantitative methods.
+                    </p>
+                </article>
+
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- ==================== CONTACT ==================== -->
 
+    <section class="contact" id="contact">
+        <div class="container">
 
-<!-- RESEARCH -->
-
-<section class="research" id="research">
-    <div class="container">
-
-        <div class="section-label">Research</div>
-
-        <h2 class="section-title">
-            Quantitative biomedical imaging
-        </h2>
-
-        <p class="section-intro">
-            My recent research combines biomedical engineering,
-            image analysis, signal processing and computational methods
-            to investigate physiological dynamics.
-        </p>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="card-number">01</div>
-                <h3>Optical Flow</h3>
+            <div class="section-heading">
+                <div class="section-kicker">Contact</div>
+                <h2>Let's connect</h2>
                 <p>
-                    Analysis of motion and pulsation-related flow using
-                    optical-flow methods applied to biomedical imaging.
+                    For academic, teaching, research, engineering, or
+                    collaboration-related enquiries, please get in touch.
                 </p>
             </div>
 
-            <div class="card">
-                <div class="card-number">02</div>
-                <h3>Physiological Signals</h3>
-                <p>
-                    Investigation of cardiac, respiratory and very-low-
-                    frequency components in quantitative imaging data.
-                </p>
-            </div>
+            <div class="contact-grid">
 
-            <div class="card">
-                <div class="card-number">03</div>
-                <h3>Computational Analysis</h3>
-                <p>
-                    MATLAB and Python-based analysis pipelines for
-                    quantitative imaging, regional statistics and
-                    visualization.
-                </p>
-            </div>
+                <div class="contact-links">
 
+                    <!-- Replace the email placeholder with your actual email -->
+                    <a class="contact-link" href="mailto:YOUR_EMAIL@example.com">
+                        <strong>Email</strong>
+                        <span>YOUR_EMAIL@example.com</span>
+                    </a>
+
+                    <!-- Replace the phone placeholder with your preferred number -->
+                    <a class="contact-link" href="tel:+358XXXXXXXXX">
+                        <strong>Phone</strong>
+                        <span>+358 XX XXX XXXX</span>
+                    </a>
+
+                    <!-- Replace the LinkedIn URL with your profile URL -->
+                    <a class="contact-link"
+                       href="https://www.linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <strong>LinkedIn</strong>
+                        <span>Professional profile</span>
+                    </a>
+
+                    <a class="contact-link"
+                       href="https://github.com/chathura-jayasekara"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <strong>GitHub</strong>
+                        <span>Projects and code</span>
+                    </a>
+
+                </div>
+
+                <p class="contact-note">
+                    This website is intended to grow alongside my teaching,
+                    research, engineering projects, and academic work.
+                </p>
+
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-    <div class="container">
-
-        <div class="section-label">Projects</div>
-
-        <h2 class="section-title">
-            Selected technical interests
-        </h2>
-
-        <p class="section-intro">
-            A selection of areas where engineering, computation and
-            interdisciplinary research come together.
-        </p>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="card-number">01</div>
-                <h3>Robotics & Navigation</h3>
-                <p>
-                    Mobile robot navigation, control, computer vision
-                    and coordinated robotic systems.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">02</div>
-                <h3>Industrial Automation</h3>
-                <p>
-                    Automation systems, industrial control and
-                    engineering project implementation.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">03</div>
-                <h3>Biomedical Data Analysis</h3>
-                <p>
-                    Quantitative imaging, signal processing,
-                    computational modelling and physiological analysis.
-                </p>
-            </div>
-
-        </div>
-
-        <br><br>
-
-        <div class="section-label">Technical Skills</div>
-
-        <div class="skills">
-
-            <span class="skill">MATLAB</span>
-            <span class="skill">Python</span>
-            <span class="skill">C++</span>
-            <span class="skill">Control Systems</span>
-            <span class="skill">Industrial Automation</span>
-            <span class="skill">Robotics</span>
-            <span class="skill">Computer Vision</span>
-            <span class="skill">Biomedical Imaging</span>
-            <span class="skill">Signal Processing</span>
-            <span class="skill">CAD</span>
-            <span class="skill">FSLeyes</span>
-            <span class="skill">Moodle</span>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-    <div class="container">
-
-        <div class="contact-box">
-
-            <div>
-                <h2>Let's connect.</h2>
-
-                <p>
-                    I am interested in engineering education,
-                    research, interdisciplinary projects and
-                    professional collaboration.
-                </p>
-            </div>
-
-            <a
-                class="btn"
-                href="mailto:chathuraddau@gmail.com">
-                Contact me
-            </a>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- FOOTER -->
+</main>
 
 <footer>
-    <div class="container">
-
-        <div class="footer-inner">
-
-            <div>
-                © 2026 Chathura Jayasekara
-            </div>
-
-            <div>
-                Mechanical Engineering · Automation · Education · Research
-            </div>
-
-        </div>
-
+    <div class="container footer-inner">
+        <span>© 2026 Chathura Jayasekara</span>
+        <span>Engineer · Educator · Researcher</span>
     </div>
 </footer>
 
