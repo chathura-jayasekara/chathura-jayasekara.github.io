@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture Materials | Chathura Jayasekara</title>
+
+    <style>
+        :root {
+            --navy: #071a3d;
+            --accent: #1769c2;
+            --text: #10213f;
+            --muted: #5f718c;
+            --line: #dce3ec;
+            --background: #f4f7fb;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--background);
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+        }
+
+        /* ==================== HEADER ==================== */
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .back-link {
+            font-weight: 700;
+        }
+
+        /* ==================== PAGE INTRO ==================== */
+
+        .page-intro {
+            padding: 75px 0 45px;
+        }
+
+        .kicker {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.05;
+            color: var(--navy);
+        }
+
+        .intro-text {
+            max-width: 820px;
+            font-size: 1.15rem;
+            color: var(--muted);
+        }
+
+        /* ==================== SUBJECT GRID ==================== */
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding-bottom: 60px;
+        }
+
+        .subject-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .subject-card h2 {
+            margin: 0 0 8px;
+            color: var(--navy);
+            font-size: 1.35rem;
+        }
+
+        .subject-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 18px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* ==================== FOOTER ==================== */
+
+        footer {
+            padding: 35px 0;
+            border-top: 1px solid var(--line);
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* ==================== MOBILE ==================== */
+
+        @media (max-width: 760px) {
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                gap: 15px;
+            }
+
+            .back-link {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header>
+        <div class="container nav">
+
+            <a href="index.html" class="logo">
+                Chathura <span>Jayasekara</span>
+            </a>
+
+            <a href="index.html#teaching" class="back-link">
+                ← Back to University Teaching
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- ==================== PAGE INTRO ==================== -->
+
+    <main>
+
+        <section class="page-intro">
+            <div class="container">
+
+                <div class="kicker">University Teaching</div>
+
+                <h1>Lecture Materials</h1>
+
+                <p class="intro-text">
+                    A growing collection of lecture notes, worked examples,
+                    exercises, and other engineering education resources
+                    developed from my university teaching experience.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== SUBJECTS ==================== -->
+
+        <section>
+            <div class="container">
+
+                <div class="subject-grid">
+
+
+                    <!-- Engineering Mechanics -->
+
+                    <article class="subject-card" id="engineering-mechanics">
+
+                        <h2>Engineering Mechanics</h2>
+
+                        <p>
+                            Fundamental engineering mechanics, problem solving,
+                            and applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- Control Systems -->
+
+                    <article class="subject-card" id="control-systems">
+
+                        <h2>Control Systems</h2>
+
+                        <p>
+                            Control concepts, analysis, and engineering
+                            applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- CAD -->
+
+                    <article class="subject-card" id="cad">
+
+                        <h2>Computer-Aided Design (CAD)</h2>
+
+                        <p>
+                            Engineering drawing, computer-aided design, and
+                            design applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- Vehicle Technology -->
+
+                    <article class="subject-card" id="vehicle-technology">
+
+                        <h2>Vehicle Technology</h2>
+
+                        <p>
+                            Vehicle systems, technology, and engineering
+                            applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- Advanced Vehicle Control -->
+
+                    <article class="subject-card" id="advanced-vehicle-control">
+
+                        <h2>Advanced Vehicle Control</h2>
+
+                        <p>
+                            Vehicle control concepts and related engineering
+                            applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- Electrical Systems of Farm Machinery -->
+
+                    <article class="subject-card" id="farm-machinery">
+
+                        <h2>Electrical Systems of Farm Machinery</h2>
+
+                        <p>
+                            Electrical systems and applications in agricultural
+                            machinery.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- Refrigeration & Air Conditioning -->
+
+                    <article class="subject-card" id="refrigeration-air-conditioning">
+
+                        <h2>Refrigeration &amp; Air Conditioning</h2>
+
+                        <p>
+                            Fundamentals of refrigeration, air conditioning,
+                            and engineering applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                    <!-- Applied Thermodynamics -->
+
+                    <article class="subject-card" id="applied-thermodynamics">
+
+                        <h2>Applied Thermodynamics</h2>
+
+                        <p>
+                            Thermodynamic principles and engineering
+                            applications.
+                        </p>
+
+                        <span class="status">
+                            Materials coming soon
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+        <div class="container">
+            © 2026 Chathura Jayasekara
+        </div>
+    </footer>
+
+</body>
+
+</html>
