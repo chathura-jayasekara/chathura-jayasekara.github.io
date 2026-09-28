@@ -430,6 +430,41 @@
             grid-template-columns: 1fr 1fr;
             gap: 22px;
         }
+        /* Teaching overview cards */
+
+        .teaching-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 35px;
+        }
+        
+        .teaching-card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 27px;
+        }
+        
+        .teaching-card h3 {
+            margin-bottom: 13px;
+            font-size: 1.25rem;
+        }
+        
+        .teaching-card p {
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+        
+        .teaching-card.featured {
+            border-top: 4px solid var(--accent);
+        }
+        
+        .card-link {
+            font-weight: 700;
+            text-decoration: none;
+        }
+
 
         .content-card {
             background: white;
