@@ -412,29 +412,24 @@
             color: var(--muted);
         }
 
-        /* ---------------- TEACHING ---------------- */
-
+               /* ---------------- TEACHING ---------------- */
+        
         .teaching {
             background: var(--surface-soft);
         }
-
+        
         .teaching-intro {
             max-width: 850px;
             color: var(--muted);
             font-size: 1.05rem;
             margin-bottom: 35px;
         }
-
-        .two-column {
+        
+        /* Teaching overview */
+        
+        .teaching-overview-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 22px;
-        }
-        /* Teaching overview cards */
-
-        .teaching-card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 22px;
             margin-top: 35px;
         }
@@ -461,99 +456,67 @@
         }
         
         .card-link {
+            color: var(--accent);
             font-weight: 700;
             text-decoration: none;
         }
-
-
-        .content-card {
-            background: white;
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 27px;
+        
+        /* Subjects taught panel */
+        
+        .teaching-subjects-card {
+            margin-top: 22px;
         }
-
-        .content-card h3 {
-            margin-bottom: 13px;
-            font-size: 1.25rem;
+        
+        .teaching-subjects-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.4rem;
         }
-
-        .content-card p {
+        
+        .teaching-subjects-card > p {
             color: var(--muted);
-            margin-bottom: 15px;
+            margin-bottom: 22px;
         }
-
+        
         .subject-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 14px;
-            margin-top: 25px;
         }
-
+        
         .subject {
             padding: 18px;
-            background: white;
+            background: var(--surface-soft);
             border: 1px solid var(--line);
             border-radius: 11px;
         }
-
+        
         .subject strong {
             display: block;
             margin-bottom: 5px;
         }
-
+        
         .subject span {
+            display: block;
             color: var(--muted);
             font-size: .92rem;
-        }
-
-        /* ---------------- LECTURE MATERIALS ---------------- */
-
-        .lecture-library {
-            margin-top: 50px;
-        }
-
-        .lecture-library > h3 {
-            font-size: 1.6rem;
             margin-bottom: 8px;
         }
-
-        .lecture-library > p {
-            color: var(--muted);
-            margin-bottom: 25px;
-        }
-
-        .lecture-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .lecture-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            background: white;
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 20px 22px;
-        }
-
-        .lecture-card h4 {
-            margin-bottom: 3px;
-        }
-
-        .lecture-card p {
-            color: var(--muted);
-            font-size: .9rem;
-        }
-
-        .status {
+        
+        .subject-link {
             color: var(--accent);
-            font-size: .85rem;
+            font-size: .92rem;
             font-weight: 700;
-            white-space: nowrap;
+            text-decoration: none;
+        }
+        
+        /* Teaching experience */
+        
+        .teaching-detail {
+            margin-top: 55px;
+        }
+        
+        .teaching-detail .section-heading {
+            margin-bottom: 28px;
         }
 
         /* ---------------- ENGINEERING ---------------- */
