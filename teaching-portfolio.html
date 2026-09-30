@@ -193,19 +193,30 @@
         }
         
         .training-areas {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-            margin: 24px 0;
-        }
-        
-        .training-areas span {
-            padding: 7px 11px;
+            margin: 25px 0;
+            padding: 20px 24px;
             background: white;
             border: 1px solid var(--line);
-            border-radius: 7px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+            row-gap: 12px;
+        }
+        
+        .training-areas div {
+            position: relative;
+            padding-left: 18px;
             color: var(--text);
-            font-size: .9rem;
+            font-size: .95rem;
+        }
+        
+        .training-areas div::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 800;
         }
         
         .training-link {
@@ -503,17 +514,20 @@
                         procedures, and strategic planning and management.
                     </p>
         
+                    
+
                     <div class="training-areas">
-        
-                        <span>Teaching &amp; Learning Methods</span>
-                        <span>Assessment &amp; Evaluation</span>
-                        <span>Curriculum Design</span>
-                        <span>ICT in Higher Education</span>
-                        <span>Teaching Practice</span>
-                        <span>Higher Education Research</span>
-                        <span>Student Development</span>
-                        <span>University Administration</span>
-        
+
+                    <div>Teaching &amp; Learning Methods</div>
+                    <div>Assessment &amp; Evaluation</div>
+                    <div>Curriculum Design &amp; Revision</div>
+                    <div>ICT in Higher Education</div>
+                    <div>Teaching Practice</div>
+                    <div>Higher Education Research</div>
+                    <div>Student Development &amp; Counselling</div>
+                    <div>University Administration</div>
+                    <div>Strategic Planning &amp; Management</div>
+                
                     </div>
         
                     <p>
@@ -535,12 +549,81 @@
             </div>
         </section>
 
+        <!-- ==================== TEACHING EVIDENCE ==================== -->
+
+        <section class="portfolio-section">
+            <div class="container">
+        
+                <h2>6. Evidence of Teaching Practice</h2>
+        
+                <p>
+                    Selected examples of teaching materials and instructional practice
+                    that demonstrate how I translate my teaching philosophy into
+                    practical learning experiences.
+                </p>
+        
+                <div class="evidence-grid">
+        
+                    <article class="evidence-card">
+                        <div class="evidence-type">Video</div>
+        
+                        <h3>Sample Lecture</h3>
+        
+                        <p>
+                            A short teaching demonstration illustrating my approach to
+                            explaining engineering concepts and connecting theory with
+                            practical examples.
+                        </p>
+        
+                        <span class="evidence-placeholder">
+                            Video coming soon
+                        </span>
+                    </article>
+        
+        
+                    <article class="evidence-card">
+                        <div class="evidence-type">Lecture Material</div>
+        
+                        <h3>Selected Lecture Material</h3>
+        
+                        <p>
+                            A selection of my own lecture notes or presentation
+                            materials developed for university engineering teaching.
+                        </p>
+        
+                        <span class="evidence-placeholder">
+                            Material coming soon
+                        </span>
+                    </article>
+        
+        
+                    <article class="evidence-card">
+                        <div class="evidence-type">Worked Example</div>
+        
+                        <h3>Engineering Problem-Solving Example</h3>
+        
+                        <p>
+                            A worked example demonstrating how theoretical concepts are
+                            introduced, explained, and applied to an engineering
+                            problem.
+                        </p>
+        
+                        <span class="evidence-placeholder">
+                            Example coming soon
+                        </span>
+                    </article>
+        
+                </div>
+        
+            </div>
+        </section>
+
         <!-- ==================== FUTURE DEVELOPMENT ==================== -->
 
         <section class="portfolio-section">
             <div class="container">
 
-                <h2>6. Future Development as a Teacher</h2>
+                <h2>7. Future Development as a Teacher</h2>
 
                 <p>
                     I aim to further develop my teaching through
