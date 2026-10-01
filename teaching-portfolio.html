@@ -38,6 +38,32 @@
             color: var(--accent);
             text-decoration: none;
         }
+        .strategy-feature {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 25px;
+        }
+        
+        .strategy-text p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .strategy-video video {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+        }
+        
+        .video-caption {
+            display: block;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
 
         .container {
             width: min(1100px, 90%);
