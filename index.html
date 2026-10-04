@@ -626,6 +626,51 @@
         .project-card p {
             color: var(--muted);
         }
+                /* ---------------- TECHNICAL SKILLS ---------------- */
+        
+        .technical-skills {
+            background: var(--surface-soft);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 27px;
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+        
+        .skill-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+        
+        .skill-list {
+            list-style: none;
+            border-top: 1px solid var(--line);
+            padding-top: 15px;
+        }
+        
+        .skill-list li {
+            color: #53647b;
+            margin: 9px 0;
+            font-size: .94rem;
+        }
+        
+        .skill-list strong {
+            color: var(--text);
+        }
+        
 
         /* ---------------- CONTACT ---------------- */
 
@@ -776,6 +821,10 @@
             .footer-inner {
                 flex-direction: column;
             }
+           .skills-grid {
+                grid-template-columns: 1fr;
+            }
+           
         }
     </style>
 </head>
@@ -794,6 +843,7 @@
                 <li><a href="#engineering">Engineering</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#technical-skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -1695,6 +1745,99 @@
             </div>
         </div>
     </section>
+
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+
+    <section class="technical-skills" id="technical-skills">
+        <div class="container">
+    
+            <div class="section-heading">
+                <div class="section-kicker">Technical Skills</div>
+                <h2>Computational, engineering and research tools</h2>
+                <p>
+                    A broad technical toolkit developed through engineering practice,
+                    university teaching, robotics, automation, and biomedical research.
+                </p>
+            </div>
+    
+            <div class="skills-grid">
+    
+                <article class="skill-card">
+                    <h3>Programming &amp; Scientific Computing</h3>
+                    <p>
+                        Programming and computational tools used for engineering,
+                        scientific analysis, modelling, and research.
+                    </p>
+    
+                    <ul class="skill-list">
+                        <li><strong>Python</strong> — scientific computing, data analysis and visualization</li>
+                        <li><strong>MATLAB</strong> — numerical analysis, signal processing and engineering computation</li>
+                        <li><strong>C / C++</strong> — embedded systems, robotics and control applications</li>
+                        <li><strong>Jupyter Notebook</strong> — interactive scientific computing and analysis</li>
+                        <li><strong>Git / GitHub</strong> — version control and project development</li>
+                        <li><strong>Linux / Ubuntu</strong> — research and computational environments</li>
+                    </ul>
+                </article>
+    
+                <article class="skill-card">
+                    <h3>Biomedical &amp; Research Computing</h3>
+                    <p>
+                        Computational tools and methods used in biomedical imaging,
+                        physiological signal analysis, and quantitative research.
+                    </p>
+    
+                    <ul class="skill-list">
+                        <li><strong>FSL / FSLeyes</strong> — neuroimaging analysis and visualization</li>
+                        <li><strong>EEGLAB</strong> — physiological signal and EEG analysis</li>
+                        <li><strong>Optical flow</strong> — quantitative motion and flow analysis</li>
+                        <li><strong>Signal processing</strong> — filtering and physiological frequency-band analysis</li>
+                        <li><strong>Image processing</strong> — quantitative biomedical image analysis</li>
+                        <li><strong>Quantitative data analysis</strong> — ROI-based analysis and visualization</li>
+                    </ul>
+                </article>
+    
+                <article class="skill-card">
+                    <h3>Engineering Design &amp; Simulation</h3>
+                    <p>
+                        Engineering design and simulation tools developed through
+                        mechanical engineering, automation, and robotics work.
+                    </p>
+    
+                    <ul class="skill-list">
+                        <li><strong>SolidWorks</strong> — mechanical design and modelling</li>
+                        <li><strong>MATLAB / Simscape</strong> — engineering modelling and simulation</li>
+                        <li><strong>CoppeliaSim</strong> — robotic system simulation</li>
+                        <li><strong>CAD</strong> — computer-aided engineering design</li>
+                        <li><strong>Control systems</strong> — modelling and analysis</li>
+                        <li><strong>PLC systems</strong> — industrial automation and machine control</li>
+                    </ul>
+                </article>
+    
+                <article class="skill-card">
+                    <h3>Embedded Systems &amp; Robotics</h3>
+                    <p>
+                        Practical experience with embedded platforms, sensors,
+                        automation, robotics, and computer-vision-based systems.
+                    </p>
+    
+                    <ul class="skill-list">
+                        <li><strong>Arduino</strong> — embedded and robotic systems</li>
+                        <li><strong>ESP8266</strong> — connected embedded applications</li>
+                        <li><strong>Raspberry Pi</strong> — automation and networked systems</li>
+                        <li><strong>Microcontrollers &amp; sensors</strong> — embedded system development</li>
+                        <li><strong>Computer vision</strong> — image-based navigation and detection</li>
+                        <li><strong>Robotics</strong> — navigation, control and autonomous systems</li>
+                    </ul>
+                </article>
+    
+            </div>
+    
+        </div>
+    </section>
+
+
+
+    
 
     <!-- ==================== CONTACT ==================== -->
 
