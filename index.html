@@ -711,29 +711,53 @@
             }
         }
 
-        @media (max-width: 680px) {
+       @media (max-width: 680px) {
+
             .container {
                 width: min(100% - 28px, var(--max-width));
             }
-
+        
             .nav {
                 min-height: 66px;
             }
-
+        
             .nav-links {
                 display: none;
             }
-
+        
             .hero {
                 min-height: auto;
             }
-
+        
             .hero-inner {
                 padding: 52px 0 62px;
+                grid-template-columns: 1fr;
+                gap: 35px;
             }
-
+        
+            .hero-text {
+                width: 100%;
+            }
+        
             .hero h1 {
                 font-size: clamp(3.5rem, 17vw, 5.5rem);
+            }
+        
+            .hero-subtitle {
+                max-width: 100%;
+                font-size: 1.15rem;
+            }
+        
+            .hero-photo {
+                width: 100%;
+                max-width: 360px;
+                justify-self: center;
+            }
+        
+            .hero-photo img {
+                height: auto;
+                aspect-ratio: 360 / 420;
+                object-fit: cover;
             }
 
             section {
