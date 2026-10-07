@@ -107,6 +107,8 @@
             color: var(--text);
             font-size: 1.35rem;
         }
+
+        
         /* =========================================================
            SECTION 6 — EVIDENCE OF TEACHING PRACTICE
            ========================================================= */
@@ -194,6 +196,20 @@
             color: var(--muted);
             line-height: 1.65;
             font-size: 0.95rem;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
         }
         
         
@@ -846,13 +862,14 @@ My in-person teaching follows a more interactive approach, incorporating active 
 
                
                 <div class="teaching-video-grid">
+                    <!-- Teaching Video 1 -->
                 
                     <article class="teaching-video-card">
 
                         <div class="video-wrapper">
                             <iframe
                                 src="https://www.youtube.com/embed/5MX61yHNRgM"
-                                title="Sample Lecture"
+                                title="Automobile Technology 1"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
                             </iframe>
@@ -867,41 +884,31 @@ My in-person teaching follows a more interactive approach, incorporating active 
                         </p>
                     
                     </article>
-                
-                
+                    <!-- Teaching Videos 2 -->
                     <article class="teaching-video-card">
-                
-                        <video controls preload="metadata">
-                            <source src="teaching-media/lecture-video-2.mp4" type="video/mp4">
-                            Your browser does not support the video element.
-                        </video>
-                
-                        <h4>Engineering Tutorial</h4>
-                
+
+                        <div class="video-wrapper">
+                            <iframe
+                                src="https://www.youtube.com/embed/CoSYsBADL1Q"
+                                title="Automobile Technology 2"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    
+                        <h4>Sample Lecture</h4>
+                    
                         <p>
-                            A tutorial session demonstrating structured problem-solving,
-                            step-by-step explanation, and guided application of engineering
-                            concepts.
+                            A sample lecture demonstrating my approach to explaining
+                            engineering concepts and connecting theoretical principles
+                            with practical examples.
                         </p>
-                
+                    
                     </article>
+                    
+                                 
                 
-                
-                    <article class="teaching-video-card">
-                
-                        <video controls preload="metadata">
-                            <source src="teaching-media/lecture-video-3.mp4" type="video/mp4">
-                            Your browser does not support the video element.
-                        </video>
-                
-                        <h4>Problem-Solving Session</h4>
-                
-                        <p>
-                            An example of how theoretical concepts are developed through
-                            worked engineering problems and interactive explanation.
-                        </p>
-                
-                    </article>
+                    
                 
                 </div>
                 
